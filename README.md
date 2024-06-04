@@ -6,3 +6,7 @@ le nom de l'appp est SafeEat
 
 
 je vais continuer a travailler la dessu plus tard
+
+
+
+maintenant c'est fini
