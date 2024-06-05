@@ -51,33 +51,33 @@ Le texte dans le `-m " ... "` permet de directement ajouter un message au commit
 
 ## Push dans GitHub
 
-Pour l'instant, vous n'avez que utiliser Git localement (apart pour la répertoire du répertoire), mais pour travailler avec une equipe, il faut mettre ses changement à disposition de tous.
-C'est pourquoi nous utilisant GitHub (aussi pratique pour déplacer des fichiers entre ordinateurs et avoir une saufgarde suplémentaire, même pour les travaux seul).
+Pour l'instant, vous n'avez qu’utilisé Git localement (sauf pour la répertoire du répertoire), mais pour travailler avec une équipe, il faut mettre ses changements à disposition de tous.
+C'est pourquoi nous utilisant GitHub (aussi pratique pour déplacer des fichiers entre ordinateurs et avoir une sauvegard supplémentaire, même pour les travaux seul).
 
-Afin de mettre en ligne votre travail, ecrivez
+Afin de mettre en ligne votre travail, écrivez
 `git push origin`
-Suivi de la branch que vous voulez push, dans ce cas, ça serais "github_setup_guide".
-Bien evidemment, il vous faut être autorisé au push par le propriétaire du répertoire.
+Suivi de la branche que vous voulez push, dans ce cas, ça serait "github_setup_guide".
+Bien évidemment, il vous faut être autorisé au push par le propriétaire du répertoire.
 
 ![Git Push Command](/github_setup_images/git_push_command.png "Push To Repository")
 
-Attention : si vous ne vous êtes pas encore identifié à GitHub sur votre Git Bash, cette fenêtre va s'afficher:
+Attention : si vous ne vous êtes pas encore identifié à GitHub sur votre Git Bash, cette fenêtre va s'afficher :
 
 ![Git Sign In Popup](/github_setup_images/gitbuh_sign_in_popup.png "Sign In GitHub")
 
-Je vous conseil d'utiliser la première option, car elle est plus rapide (si vous êtes déjà connecté à GitHub sur votre navigateur).
+Je vous conseille d'utiliser la première option, car elle est plus rapide (si vous êtes déjà connecté à GitHub sur votre navigateur).
 
-Vous devriez maintenant pouvoir voir votre nouvelle branche dans votre répértoire github:
+Vous devriez maintenant pouvoir voir votre nouvelle branche dans votre répertoire GitHub:
 
 ![GitHub New Branch Pushed](/github_setup_images/github_new_branch_pushed.png "Successful Push In GitHub")
 
-A présent, dès que vous avez travailler sur votre branche, n'oublier pas de stage et commit, et au moins une fois par jour, push ces changement dans votre branche GitHub.
+A présent, dès que vous avez travaillé sur votre branche, n'oublier pas de stage et commit, et au moins une fois par jour, push ces changement dans votre branche GitHub.
 
 ## Merge
 
-Une fois que vous avez fini de travailler sur la fonctionalité liée à votre branche, vous voudrez sûrement ajouter cette fonctionnalité au projet principale (qui se trouve dans le main), pour cela, il vous faut "merge" votre branche avec le main:
+Une fois que vous avez fini de travailler sur la fonctionnalité  liée à votre branche, vous voudrez sûrement ajouter cette fonctionnalité au projet principale (qui se trouve dans le main), pour cela, il vous faut "merge" votre branche avec le main:
 
-Sur votre branche dans GitHub, vous devriez avoir un bouton "Contribute", ce bouton vous permet de comparer votre branche à une autre, et ouvrire une requête de "pull".
+Sur votre branche dans GitHub, vous devriez avoir un bouton "Contribute", ce bouton vous permet de comparer votre branche à une autre, et ouvrir une requête de "pull".
 
 ![GitHub Contribute Button](/github_setup_images/github_compare_and_pull_request.png "Compare Or Open Pull Request")
 
@@ -85,12 +85,12 @@ Vous aurez alors la possibilité d'ajouter une description à la Pull request:
 
 ![GitHub Write Pull Request Description](/github_setup_images/github_write_pull_request_desription.png "Add A Description To Your Pull Request")
 
-Vous serez alors informé des "conflicts de Merge" qui se sont produit, normalement si tout à bien été fait, il ne devrais pas en avoir.
+Vous serez alors informé des "conflicts de Merge" qui se sont produit, normalement si tout à bien été fait, il ne devrait pas en avoir.
 
 
 ![GitHub Merge Pull Request](/github_setup_images/github_merge_pull_request.png "Merge A GitHub Branch To Another")
 
-Et voilà ! Votre Merge est fait et la branche "Main" doit a présent avoir votre fonctionnalité en plus, vous pouvez a présent surpprimer votre branche (surprimmer les branches après les merge est conseillé si vous n'allez pas modifier cette branche dans le future, par example en devloppement "Trunk Based", une pratique conseillé pour les petites équipes de Dev)
+Et voilà ! Votre Merge est fait et la branche "Main" doit à présent avoir votre fonctionnalité en plus, vous pouvez à présent supprimer votre branche (supprimer les branches après les merge est conseillé si vous n'allez pas modifier cette branche dans le future, par exemple en dévloppement "Trunk Based", une pratique conseillé pour les petites équipes de Dev)
 
 ![GitHub Delete A Branch After Merge](/github_setup_images/github_delete_branch_after_merge.png "Delete A Branch After Merging It")
 
