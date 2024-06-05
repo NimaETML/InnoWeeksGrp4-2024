@@ -14,7 +14,7 @@ suivi du lien au répértoire GitHub que vous voulez cloner dans votre machine (
 
 Une fois le répértoire cloné, déplacez-vous dans celui-ci et ouvrez un Git Bash.
 
-(Vous pouvez aussi vous déplacer depuis le même Git Bash, avec 'cd')
+(Vous pouvez aussi vous déplacer depuis le même Git Bash, avec `cd`)
 ![CD Command](/github_setup_images/get_to_cloned_repository.png "Get To Cloned Repository")
 
 Vous devriez vous retrouvez sur la branche "main", avec aucun changement fait sur cette branche.
@@ -26,19 +26,19 @@ afin de travailler, vous devez a présent créer une nouvelle branche:
 ## Création d'une branche
 
 dans votre répértoire, ecrivez
-```git branch```
+`git branch`
 suivi du nom que vous voulez donner à votre branche, par example une fonctionnalité à ajouter.
 
 ![Git Branch And Checkout Command](/github_setup_images/git_branch_and_checkout_command.png "Create And Move To Branch")
 
-Effectuez ensuite un 'git checkout nom_branch' pour vous déplacer dans la branche en question.
+Effectuez ensuite un `git checkout nom_branch` pour vous déplacer dans la branche en question.
 
 à présent, vous pouvez modifier les fichiers dans le répértoire.
 
 ## Stage et Commit
 
-après avoir effectuer des modifications, vous devez saufgarder votre travail avec 'git stage .' (vous pouvez specifier un fichier en particulier après le 'git stage', mais le '.' est plus souvent utiliser, car il séléctionne tout).
-note: 'git stage' est un alias de 'git add', ces deux commandes font exactement la même chose.
+après avoir effectuer des modifications, vous devez saufgarder votre travail avec `git stage .` (vous pouvez specifier un fichier en particulier après le `git stage`, mais le `.` est plus souvent utiliser, car il séléctionne tout).
+note: `git stage` est un alias de `git add`, ces deux commandes font exactement la même chose.
 
 Par exemple, j'ai ici ajouter 6 fichiers, ce support en question ainsi que 5 images
 ![Git Stage And Status Command](/github_setup_images/git_stage_and_status_command.png "Stage Changes And Display Branch Status")
@@ -47,7 +47,7 @@ Après avoir ajouté ces fichiers, je peut les "commit", afin de les enregister 
 
 ![Git Commit Command](/github_setup_images/git_commit_command.png "Commit Stages Changes")
 
-le text dans le '-m " ... "' permet de directement ajouter un message au commit, qui servira à se repérer entre les commits, ce message doit être assez bref.
+le text dans le `-m " ... "` permet de directement ajouter un message au commit, qui servira à se repérer entre les commits, ce message doit être assez bref.
 
 ## Push dans GitHub
 
@@ -55,7 +55,7 @@ Pour l'instant, vous n'avez que utiliser Git localement (apart pour la récupér
 C'est pourquoi nous utilisant GitHub (aussi pratique pour déplacer des fichiers entre ordinateurs et avoir une saufgarde suplémentaire, même pour les travaux seul).
 
 Afin de mettre en ligne votre travail, ecrivez
-'git push origin'
+`git push origin`
 suivi de la branch que vous voulez push, dans ce cas, ça serais "github_setup_guide".
 bien evidemment, il vous faut être autorisé au push par le propriétaire du répértoire.
 
@@ -75,4 +75,23 @@ A présent, dès que vous avez travailler sur votre branche, n'oublier pas de st
 
 ## Merge
 
-une fois que vous avez fini de travailler sur la fonctionalité liée à votre branche, vous voudrez sûrement ajouter cette fonctionnalité au projet principale (qui se trouve dans le main), pour cela, il vous faut 'merge' votre branche avec le main:
+une fois que vous avez fini de travailler sur la fonctionalité liée à votre branche, vous voudrez sûrement ajouter cette fonctionnalité au projet principale (qui se trouve dans le main), pour cela, il vous faut "merge" votre branche avec le main:
+
+Sur votre branche dans GitHub, vous devriez avoir un bouton "Contribute", ce bouton vous permet de comparer votre branche à une autre, et ouvrire une requête de "pull".
+
+![GitHub Contribute Button](/github_setup_images/github_compare_and_pull_request.png "Compare Or Open Pull Request")
+
+Vous aurez alors la possibilité d'ajouter une description à la Pull request:
+
+![GitHub Write Pull Request Description](/github_setup_images/github_write_pull_request_desription.png "Add A Description To Your Pull Request")
+
+Vous serez alors informé des "conflicts de Merge" qui se sont produit, normalement si tout à bien été fait, il ne devrais pas en avoir.
+
+
+![GitHub Merge Pull Request](/github_setup_images/github_merge_pull_request.png "Merge A GitHub Branch To Another")
+
+Et voilà ! Votre Merge est fait et la branche "Main" doit a présent avoir votre fonctionnalité en plus, vous pouvez a présent surpprimer votre branche (surprimmer les branches après les merge est conseillé si vous n'allez pas modifier cette branche dans le future, par example en devloppement "Trunk Based", une pratique conseillé pour les petites équipes de Dev)
+
+![GitHub Delete A Branch After Merge](/github_setup_images/github_delete_branch_after_merge.png "Delete A Branch After Merging It")
+
+
