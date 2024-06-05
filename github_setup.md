@@ -7,7 +7,7 @@ toutes les commandes sont efféctuer dans un Git Bash.
 ## Mis en place du répértoire de travail
 
 dans le répértoire root dans lequel vous voulez travailler, ecrivez
-´git clone´
+`git clone`
 suivi du lien au répértoire GitHub que vous voulez cloner dans votre machine (ce lien est accèsible en cliquant sur le bouton "Code" dans un répértoire GitHub, sous "HTTPS").
 
 ![Git Clone Command](/github_setup_images/git_clone_command.png "Clone Remote Repository")
@@ -26,7 +26,7 @@ afin de travailler, vous devez a présent créer une nouvelle branche:
 ## Création d'une branche
 
 dans votre répértoire, ecrivez
-'git branch'
+```git branch```
 suivi du nom que vous voulez donner à votre branche, par example une fonctionnalité à ajouter.
 
 ![Git Branch And Checkout Command](/github_setup_images/git_branch_and_checkout_command.png "Create And Move To Branch")
