@@ -1,12 +1,12 @@
 # Support création d'un espace de travail pour équipe grâce à GitHub
 
-toutes les commandes sont efféctuer dans un Git Bash.
+Toutes les commandes sont effectuer dans un Git Bash.
 
 ![Git Bash Image](/github_setup_images/git_bash_highlight.png "Open Git Bash")
 
 ## Mis en place du répértoire de travail
 
-dans le répértoire root dans lequel vous voulez travailler, ecrivez
+Dans le répértoire root dans lequel vous voulez travailler, ecrivez
 `git clone`
 suivi du lien au répértoire GitHub que vous voulez cloner dans votre machine (ce lien est accèsible en cliquant sur le bouton "Code" dans un répértoire GitHub, sous "HTTPS").
 
@@ -21,24 +21,24 @@ Vous devriez vous retrouvez sur la branche "main", avec aucun changement fait su
 
 ![Git Status Command](/github_setup_images/git_status_command.png "Get Repository Status")
 
-afin de travailler, vous devez a présent créer une nouvelle branche:
+Afin de travailler, vous devez a présent créer une nouvelle branche:
 
 ## Création d'une branche
 
-dans votre répértoire, ecrivez
+Dans votre répértoire, ecrivez
 `git branch`
-suivi du nom que vous voulez donner à votre branche, par example une fonctionnalité à ajouter.
+Suivi du nom que vous voulez donner à votre branche, par example une fonctionnalité à ajouter.
 
 ![Git Branch And Checkout Command](/github_setup_images/git_branch_and_checkout_command.png "Create And Move To Branch")
 
 Effectuez ensuite un `git checkout nom_branch` pour vous déplacer dans la branche en question.
 
-à présent, vous pouvez modifier les fichiers dans le répértoire.
+À présent, vous pouvez modifier les fichiers dans le répértoire.
 
 ## Stage et Commit
 
-après avoir effectuer des modifications, vous devez saufgarder votre travail avec `git stage .` (vous pouvez specifier un fichier en particulier après le `git stage`, mais le `.` est plus souvent utiliser, car il séléctionne tout).
-note: `git stage` est un alias de `git add`, ces deux commandes font exactement la même chose.
+Après avoir effectuer des modifications, vous devez saufgarder votre travail avec `git stage .` (vous pouvez specifier un fichier en particulier après le `git stage`, mais le `.` est plus souvent utiliser, car il séléctionne tout).
+Note: `git stage` est un alias de `git add`, ces deux commandes font exactement la même chose.
 
 Par exemple, j'ai ici ajouter 6 fichiers, ce support en question ainsi que 5 images
 ![Git Stage And Status Command](/github_setup_images/git_stage_and_status_command.png "Stage Changes And Display Branch Status")
@@ -47,7 +47,7 @@ Après avoir ajouté ces fichiers, je peut les "commit", afin de les enregister 
 
 ![Git Commit Command](/github_setup_images/git_commit_command.png "Commit Stages Changes")
 
-le text dans le `-m " ... "` permet de directement ajouter un message au commit, qui servira à se repérer entre les commits, ce message doit être assez bref.
+Le text dans le `-m " ... "` permet de directement ajouter un message au commit, qui servira à se repérer entre les commits, ce message doit être assez bref.
 
 ## Push dans GitHub
 
@@ -56,8 +56,8 @@ C'est pourquoi nous utilisant GitHub (aussi pratique pour déplacer des fichiers
 
 Afin de mettre en ligne votre travail, ecrivez
 `git push origin`
-suivi de la branch que vous voulez push, dans ce cas, ça serais "github_setup_guide".
-bien evidemment, il vous faut être autorisé au push par le propriétaire du répértoire.
+Suivi de la branch que vous voulez push, dans ce cas, ça serais "github_setup_guide".
+Bien evidemment, il vous faut être autorisé au push par le propriétaire du répértoire.
 
 ![Git Push Command](/github_setup_images/git_push_command.png "Push To Repository")
 
@@ -75,7 +75,7 @@ A présent, dès que vous avez travailler sur votre branche, n'oublier pas de st
 
 ## Merge
 
-une fois que vous avez fini de travailler sur la fonctionalité liée à votre branche, vous voudrez sûrement ajouter cette fonctionnalité au projet principale (qui se trouve dans le main), pour cela, il vous faut "merge" votre branche avec le main:
+Une fois que vous avez fini de travailler sur la fonctionalité liée à votre branche, vous voudrez sûrement ajouter cette fonctionnalité au projet principale (qui se trouve dans le main), pour cela, il vous faut "merge" votre branche avec le main:
 
 Sur votre branche dans GitHub, vous devriez avoir un bouton "Contribute", ce bouton vous permet de comparer votre branche à une autre, et ouvrire une requête de "pull".
 
