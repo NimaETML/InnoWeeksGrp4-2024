@@ -1,3 +1,51 @@
+<script setup>
+import AllergyElement from '@/components/AllergyElement.vue'
+
+import { onMounted, ref } from 'vue'
+//import BookService from '@/services/BookService'
+
+const allergies = ref(null)
+
+onMounted(() => {
+  menu = {
+    plats: [
+      {
+        id: '1',
+        nomPlat: 'Tomato Soup',
+        descriptionPlat: 'slurp slurp'
+        allergicIngredients: [
+          { id: 61, numname: 1, quantity: 1, needDrop: 'false' },
+          { id: 62, numname: 2, quantity: 0, needDrop: 'false' },
+          { id: 63, numname: 3, quantity: 2, needDrop: 'true' },
+          { id: 64, numname: 4, quantity: 0, needDrop: 'true' },
+          { id: 65, numname: 5, quantity: 1, needDrop: 'false' },
+          { id: 66, numname: 6, quantity: 2, needDrop: 'false' }
+        ]
+      },
+      {
+        id: '2',
+        nomPlat: 'Pizza',
+        descriptionPlat: 'yum yum'
+        allergicIngredients: [
+        { id: 436, numname: 1, quantity: 1, needDrop: 'false' },
+          { id: 96, numname: 2, quantity: 0, needDrop: 'false' },
+          { id: 572, numname: 5, quantity: 1, needDrop: 'false' },
+        ]
+      },
+      {
+        id: '3',
+        nomPlat: 'Spageth',
+        descriptionPlat: 'yum yum also'
+        allergicIngredients: [
+        { id: 824, numname: 4, quantity: 0, needDrop: 'true' },
+          { id: 19, numname: 5, quantity: 1, needDrop: 'false' },
+        ]
+      }
+    ]
+  }
+})
+</script>
+
 <template>
   <div class="item">
     <i>
@@ -5,8 +53,14 @@
     </i>
     <div class="details">
       <h3>
-        <slot name="heading"></slot>
+        <slot name="ingredient"></slot>
       </h3>
+      <form method="get" action="">
+        <p>
+          <AllergyElement v-for="allergy in allergies" :key="allergies.id" :allergies="allergies" />
+        </p>
+        <input type="submit" name="envoyer" value="ENVOYER" class="cta" />
+      </form>
       <slot></slot>
     </div>
   </div>
@@ -17,11 +71,6 @@
   margin-top: 2rem;
   display: flex;
   position: relative;
-}
-
-.details {
-  flex: 1;
-  margin-left: 1rem;
 }
 
 i {
@@ -41,46 +90,5 @@ h3 {
 }
 
 @media (min-width: 1024px) {
-  .item {
-    margin-top: 0;
-    padding: 0.4rem 0 1rem calc(var(--section-gap) / 2);
-  }
-
-  i {
-    top: calc(50% - 25px);
-    left: -26px;
-    position: absolute;
-    border: 1px solid var(--color-border);
-    background: var(--color-background);
-    border-radius: 8px;
-    width: 50px;
-    height: 50px;
-  }
-
-  .item:before {
-    content: ' ';
-    border-left: 1px solid var(--color-border);
-    position: absolute;
-    left: 0;
-    bottom: calc(50% + 25px);
-    height: calc(50% - 25px);
-  }
-
-  .item:after {
-    content: ' ';
-    border-left: 1px solid var(--color-border);
-    position: absolute;
-    left: 0;
-    top: calc(50% + 25px);
-    height: calc(50% - 25px);
-  }
-
-  .item:first-of-type:before {
-    display: none;
-  }
-
-  .item:last-of-type:after {
-    display: none;
-  }
 }
 </style>
