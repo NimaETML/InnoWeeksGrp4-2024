@@ -3,6 +3,14 @@ defineProps({
   msg: {
     type: String,
     required: true
+  },
+  menu: {
+    type: String,
+    required: true
+  },
+  restaurant: {
+    type: String,
+    required: true
   }
 })
 </script>
@@ -10,12 +18,7 @@ defineProps({
 <template>
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
-    <h2>Ce site n'a pas encore de contenu</h2>
-    <h3>
-      You’ve successfully created a project with
-      <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +
-      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
-    </h3>
+    <h2>vous accèdez au {{ menu }} - {{ restaurant }}</h2>
   </div>
 </template>
 
@@ -34,12 +37,5 @@ h3 {
 .greetings h1,
 .greetings h3 {
   text-align: center;
-}
-
-@media (min-width: 1024px) {
-  .greetings h1,
-  .greetings h3 {
-    text-align: left;
-  }
 }
 </style>

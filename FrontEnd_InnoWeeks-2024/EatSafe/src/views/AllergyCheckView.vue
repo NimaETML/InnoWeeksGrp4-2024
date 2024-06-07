@@ -5,41 +5,43 @@ import { onMounted, ref } from 'vue'
 
 //const allergies = ref(null)
 
+function continue() {}
+
 const allergies = ref([
   {
     id: 1,
     name: 'Arachide',
-    url: '../assets/icons/Arachide.png',
+    url: '/src/assets/icons/Arachide.png',
     alt: 'Arachide'
   },
   {
     id: 2,
     name: 'Céleri',
-    url: '../assets/icons/Celeri.png',
+    url: '/src/assets/icons/Celeri.png',
     alt: 'Céleri'
   },
   {
     id: 3,
     name: 'Crustacés',
-    url: '../assets/icons/Crustaces.png',
+    url: '/src/assets/icons/Crustaces.png',
     alt: 'Crustacés'
   },
   {
     id: 4,
     name: 'Avoine',
-    url: '../assets/icons/Avoine.png',
+    url: '/src/assets/icons/Avoine.png',
     alt: 'Avoine'
   },
   {
     id: 5,
     name: 'Blé',
-    url: '../assets/icons/Arachide.png',
+    url: '/src/assets/icons/Ble.png',
     alt: 'Blé'
   },
   {
     id: 6,
     name: 'Amande',
-    url: '../assets/icons/Arachide.png',
+    url: '/src/assets/icons/Amande.png',
     alt: 'Amande'
   }
 ])
@@ -91,7 +93,7 @@ onMounted(() => {
         <p>
           <AllergyElement v-for="allergy in allergies" :key="allergy.id" :allergy="allergy" />
         </p>
-        <input type="submit" name="envoyer" value="ENVOYER" class="cta" />
+        <input type="submit" name="envoyer" value="continuer" class="cta" />
       </form>
     </div>
   </div>
@@ -118,8 +120,5 @@ h3 {
   font-weight: 500;
   margin-bottom: 0.4rem;
   color: var(--color-heading);
-}
-
-@media (min-width: 1024px) {
 }
 </style>

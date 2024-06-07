@@ -5,9 +5,6 @@ defineProps({
     required: true
   }
 })
-
-//Image.src = props.allergy.url
-
 //const currentName = 'not loaded yet'
 
 /*
@@ -18,10 +15,6 @@ function getNameFromNumName(allergyId) {
     }
   })
 }*/
-/*
-onMounted(async () => {
-  currentName = await getNameFromNumName(props.allergy.id)
-})*/
 </script>
 
 <template>
@@ -29,10 +22,9 @@ onMounted(async () => {
     <h3>
       <!-- IMAGE NON FONCTIONNEL -->
       <!-- prettier-ignore -->
-      <img src="" alt="allergy.alt"/>
+      <img class="chkbox-img" :src="allergy.url" alt="allergy.alt" width="32" height="32"/>
       <!-- prettier-ignore -->
-      <input type="checkbox"/>
-      <label for="1">{{ allergy.name }}</label>
+      <label class="chkbox"><input type="checkbox" class="chkbox-text" >{{ allergy.name }}</label>
     </h3>
   </div>
 </template>
@@ -41,10 +33,28 @@ onMounted(async () => {
 h3 {
   font-size: 1.3rem;
   font-weight: 500;
-  margin-bottom: 0.6rem;
-  color: var(--color-heading);
+  margin-bottom: 1.8rem;
+  text-align: center;
+  border: 3px solid green;
+  border-radius: 8px;
 }
 
-@media (min-width: 1024px) {
+.chkbox {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: bold;
+  border: 1px solid transparent;
+}
+
+.chkbox-img {
+  text-align: center;
+}
+
+input[type='checkbox'] {
+  float: right;
+  padding-left: 10px;
+  text-align: center;
+  /* center checkbox horizontally */
+  vertical-align: middle;
 }
 </style>
