@@ -6,53 +6,42 @@ defineProps({
   }
 })
 
-import { onMounted, ref } from 'vue'
+//Image.src = props.allergy.url
 
-allergies = Array([1, 'Arachide'], [2, 'Céleri'], [3, 'Crustacés'], [4, 'Avoine'], [5, 'Blé'], [6, 'Amande']);
+//const currentName = 'not loaded yet'
 
-const currentName = "not loaded yet"
-
-// PAS ENCORE FINI
-getNameFromNumName(() => {
-  foreach allergy in allergies {
-    if (id = allergy[0])
-    {
-      return allergy[1]
+/*
+function getNameFromNumName(allergyId) {
+  allergies.forEach((currentAllergy) => {
+    if ((allergyId = currentAllergy[0])) {
+      return currentAllergy[1]
     }
-  }
-})
-
-onMounted(() => {
-  currentName = getNameFromNumName({{ allergy.id }})
-})
+  })
+}*/
+/*
+onMounted(async () => {
+  currentName = await getNameFromNumName(props.allergy.id)
+})*/
 </script>
 
 <template>
-  <!-- prettier-ignore -->
-  <input type="checkbox"/>
-  <label for="1">{{ currentName }}</label>
+  <div class="details">
+    <h3>
+      <!-- IMAGE NON FONCTIONNEL -->
+      <!-- prettier-ignore -->
+      <img src="" alt="allergy.alt"/>
+      <!-- prettier-ignore -->
+      <input type="checkbox"/>
+      <label for="1">{{ allergy.name }}</label>
+    </h3>
+  </div>
 </template>
 
 <style scoped>
-.item {
-  margin-top: 2rem;
-  display: flex;
-  position: relative;
-}
-
-i {
-  display: flex;
-  place-items: center;
-  place-content: center;
-  width: 32px;
-  height: 32px;
-  color: var(--color-text);
-}
-
 h3 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 500;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.6rem;
   color: var(--color-heading);
 }
 

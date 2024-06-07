@@ -17,20 +17,6 @@ defineProps({
       <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
     </h3>
   </div>
-  <form method="get" action="">
-    <p>
-      Cochez les aliments dont vous êtes allergique :<br />
-      <input type="checkbox" name="frites" id="frites" />
-      <label for="frites">Frites</label><br />
-      <input type="checkbox" name="steak" id="steak" />
-      <label for="steak">Steak</label><br />
-      <input type="checkbox" name="epinards" id="epinards" />
-      <label for="epinards">Épinards</label><br />
-      <input type="checkbox" name="huitres" id="huitres" />
-      <label for="huitres">Huitres</label>
-    </p>
-    <input type="submit" name="envoyer" value="ENVOYER" class="cta" />
-  </form>
 </template>
 
 <style scoped>
