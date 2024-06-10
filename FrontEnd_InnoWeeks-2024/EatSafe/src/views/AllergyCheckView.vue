@@ -29,6 +29,8 @@ import { allergies } from '@/data/allergy_data'
   margin-top: 2rem;
   display: flex;
   position: relative;
+  place-items: center;
+  place-content: center;
 }
 
 i {

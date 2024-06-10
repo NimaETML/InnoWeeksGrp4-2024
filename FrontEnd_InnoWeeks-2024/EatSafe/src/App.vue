@@ -4,26 +4,29 @@ import Title from './components/Title.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="50" height="50" />
+  <div>
+    <header>
+      <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="50" height="50" />
 
-    <div class="wrapper">
-      <Title msg="EatSafe" menu="Menu principale" restaurant="Pizza Squizz" />
+      <div class="wrapper">
+        <Title app_title="EatSafe" restaurant="Pizza Squizz" />
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+        <nav>
+          <RouterLink to="/">Home</RouterLink>
+          <RouterLink to="/about">About</RouterLink>
+          <RouterLink to="/display-menu">Menu</RouterLink>
+        </nav>
+      </div>
+    </header>
+    <RouterView />
+  </div>
 </template>
 
 <style scoped>
 header {
-  line-height: 1.5;
+  line-height: 1.6;
   max-height: 100vh;
+  padding-bottom: 40px;
 }
 
 .logo {
@@ -33,7 +36,7 @@ header {
 
 nav {
   width: 100%;
-  font-size: 12px;
+  font-size: 22px;
   text-align: center;
   margin-top: 2rem;
 }

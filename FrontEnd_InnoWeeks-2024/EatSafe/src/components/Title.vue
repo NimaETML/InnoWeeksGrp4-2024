@@ -1,10 +1,6 @@
 <script setup>
 defineProps({
-  msg: {
-    type: String,
-    required: true
-  },
-  menu: {
+  app_title: {
     type: String,
     required: true
   },
@@ -17,8 +13,8 @@ defineProps({
 
 <template>
   <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
-    <h2>vous accèdez au {{ menu }} - {{ restaurant }}</h2>
+    <h1 class="green">{{ app_title }}</h1>
+    <h2>vous accèdez au menu du restaurant {{ restaurant }}</h2>
   </div>
 </template>
 
@@ -29,9 +25,12 @@ h1 {
   position: relative;
   top: -10px;
 }
+h2 {
+  text-align: center;
+}
 
-h3 {
-  font-size: 1.2rem;
+h2 {
+  font-size: 1.8rem;
 }
 
 .greetings h1,

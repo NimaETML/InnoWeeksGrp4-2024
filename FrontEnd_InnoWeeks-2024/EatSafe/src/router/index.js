@@ -18,6 +18,11 @@ const router = createRouter({
       path: '/register-restaurant',
       name: 'register-restaurant',
       component: () => import('../views/RegisterRestaurantView.vue')
+    },
+    {
+      path: '/display-menu',
+      name: 'display-menu',
+      component: () => import('../views/DisplayMenuView.vue')
     }
   ]
 })
