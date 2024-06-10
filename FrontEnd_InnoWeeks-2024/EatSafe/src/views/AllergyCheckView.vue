@@ -1,89 +1,14 @@
 <script setup>
 import AllergyElement from '@/components/AllergyElement.vue'
 import { onMounted, ref } from 'vue'
+import { allergies } from '@/data/allergy_data'
 //import BookService from '@/services/BookService'
 
 //const allergies = ref(null)
 
-function continue() {}
+//function continue() {}
 
-const allergies = ref([
-  {
-    id: 1,
-    name: 'Arachide',
-    url: '/src/assets/icons/Arachide.png',
-    alt: 'Arachide'
-  },
-  {
-    id: 2,
-    name: 'Céleri',
-    url: '/src/assets/icons/Celeri.png',
-    alt: 'Céleri'
-  },
-  {
-    id: 3,
-    name: 'Crustacés',
-    url: '/src/assets/icons/Crustaces.png',
-    alt: 'Crustacés'
-  },
-  {
-    id: 4,
-    name: 'Avoine',
-    url: '/src/assets/icons/Avoine.png',
-    alt: 'Avoine'
-  },
-  {
-    id: 5,
-    name: 'Blé',
-    url: '/src/assets/icons/Ble.png',
-    alt: 'Blé'
-  },
-  {
-    id: 6,
-    name: 'Amande',
-    url: '/src/assets/icons/Amande.png',
-    alt: 'Amande'
-  }
-])
-
-onMounted(() => {
-  const menu = {
-    plats: [
-      {
-        id: '1',
-        nomPlat: 'Tomato Soup',
-        descriptionPlat: 'slurp slurp',
-        allergicIngredients: [
-          { id: 61, numname: 1, quantity: 1, needDrop: 'false' },
-          { id: 62, numname: 2, quantity: 0, needDrop: 'false' },
-          { id: 63, numname: 3, quantity: 2, needDrop: 'true' },
-          { id: 64, numname: 4, quantity: 0, needDrop: 'true' },
-          { id: 65, numname: 5, quantity: 1, needDrop: 'false' },
-          { id: 66, numname: 6, quantity: 2, needDrop: 'false' }
-        ]
-      },
-      {
-        id: '2',
-        nomPlat: 'Pizza',
-        descriptionPlat: 'yum yum',
-        allergicIngredients: [
-          { id: 436, numname: 1, quantity: 1, needDrop: 'false' },
-          { id: 96, numname: 2, quantity: 0, needDrop: 'false' },
-          { id: 572, numname: 5, quantity: 1, needDrop: 'false' }
-        ]
-      },
-      {
-        id: '3',
-        nomPlat: 'Spageth',
-        descriptionPlat: 'yum yum also',
-        allergicIngredients: [
-          { id: 824, numname: 4, quantity: 0, needDrop: 'true' },
-          { id: 19, numname: 5, quantity: 1, needDrop: 'false' }
-        ]
-      }
-    ]
-  }
-})
+//onMounted()
 </script>
 
 <template>

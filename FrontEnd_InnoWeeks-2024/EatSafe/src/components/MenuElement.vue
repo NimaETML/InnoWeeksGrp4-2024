@@ -1,6 +1,6 @@
 <script setup>
 defineProps({
-  allergy: {
+  menu: {
     type: Object,
     required: true
   }
@@ -11,7 +11,7 @@ defineProps({
   <div class="details">
     <h3>
       <!-- prettier-ignore -->
-      <img class="chkbox-img" :src="allergy.url" alt="allergy.alt" width="32" height="32"/>
+      <img class="chkbox-img" :src="menu.url" width="32" height="32"/>
       <!-- prettier-ignore -->
       <label class="chkbox"><input type="checkbox" class="chkbox-text" >{{ allergy.name }}</label>
     </h3>
