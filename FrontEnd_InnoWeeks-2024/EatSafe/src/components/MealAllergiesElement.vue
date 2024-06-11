@@ -43,7 +43,7 @@ onMounted(() => {
       <!--<img class="chkbox-img" :src="meal.img_url" width="140" height="140"/>-->
       <!-- prettier-ignore -->
       <p class="grid-item">{{ currentName, quantityName }}</p>
-      <p class="grid-item">{{ quantityName }}</p>
+      <p class="grid-item">{{quantityName }}</p>
     </h3>
   </div>
 </template>
@@ -72,13 +72,5 @@ h3 {
   padding-right: 10px;
   font-size: 1.1rem;
   border: 1px solid transparent;
-}
-
-input[type='checkbox'] {
-  float: right;
-  padding-left: 10px;
-  text-align: center;
-  /* center checkbox horizontally */
-  vertical-align: middle;
 }
 </style>
