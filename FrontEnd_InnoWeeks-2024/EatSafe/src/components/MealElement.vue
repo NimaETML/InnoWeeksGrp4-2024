@@ -38,9 +38,10 @@ h3 {
   padding: 20px;
 }
 
+/* GRID */
 #ingredient-element {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto;
   gap: 30px 30px;
   padding: 20px;
 }
