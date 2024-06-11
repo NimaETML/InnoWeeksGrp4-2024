@@ -1,9 +1,38 @@
 <script setup>
-defineProps({
+const props = defineProps({
   ingredient: {
     type: Object,
     required: true
   }
+})
+import { onMounted, ref } from 'vue'
+import { allergies } from '@/data/allergy_data'
+import { quantities } from '@/data/quanity_data'
+
+let currentName = ref(null)
+
+let quantityName = ref(null)
+
+function getQuantityTextFromQuantityNum(QuantityNameId) {
+  console.log(QuantityNameId)
+  quantities.forEach((currentQuantity) => {
+    if (QuantityNameId == currentQuantity.id) {
+      console.log(currentQuantity.text)
+      quantityName = currentQuantity.text
+    }
+  })
+}
+
+function getIngredientNameFromId(IngredientNameId) {
+  allergies.forEach((currentAllergy) => {
+    if (IngredientNameId == currentAllergy.id) {
+      currentName = currentAllergy.name
+    }
+  })
+}
+onMounted(() => {
+  getIngredientNameFromId(props.ingredient.numname)
+  getQuantityTextFromQuantityNum(props.ingredient.quantity)
 })
 </script>
 
@@ -13,9 +42,8 @@ defineProps({
       <!-- prettier-ignore -->
       <!--<img class="chkbox-img" :src="meal.img_url" width="140" height="140"/>-->
       <!-- prettier-ignore -->
-      <h2 class="name">{{ ingredient.id }}</h2>
-      <h4 class="description">{{ ingredient.numname }}</h4>
-      <p1 class="description">{{ ingredient.quantity }}</p1>
+      <p class="grid-item">{{ currentName, quantityName  }}</p>
+      <p class="grid-item">{{ quantityName }}</p>
     </h3>
   </div>
 </template>

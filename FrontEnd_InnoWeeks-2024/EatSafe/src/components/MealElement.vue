@@ -16,7 +16,7 @@ import MealAllergiesElement from '@/components/MealAllergiesElement.vue'
       <!-- prettier-ignore -->
       <h2 class="name">{{ meal.meal_name }}</h2>
       <h4 class="description">{{ meal.meal_description }}</h4>
-      <p>
+      <p id="ingredient-element">
         <MealAllergiesElement
           v-for="ingredient in meal.allergicIngredients"
           :key="ingredient.id"
@@ -38,6 +38,19 @@ h3 {
   padding: 20px;
 }
 
+#ingredient-element {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 30px 30px;
+  padding: 20px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid green;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
 .name {
   padding-left: 10px;
   padding-right: 10px;

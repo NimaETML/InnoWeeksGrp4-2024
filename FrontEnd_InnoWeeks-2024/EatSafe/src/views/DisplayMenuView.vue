@@ -1,16 +1,6 @@
 <script setup>
 import { menus } from '@/data/menu_data'
 import MenuElement from '@/components/MenuElement.vue'
-
-const currentName = 'not loaded yet'
-
-function getNameFromNumName(allergyId) {
-  allergies.forEach((currentAllergy) => {
-    if ((allergyId = currentAllergy[0])) {
-      return currentAllergy[1]
-    }
-  })
-}
 </script>
 <template>
   <div class="register">
