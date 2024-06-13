@@ -43,7 +43,7 @@ onMounted(() => {
       <!--<img class="chkbox-img" :src="meal.img_url" width="140" height="140"/>-->
       <!-- prettier-ignore -->
       <p class="grid-item">{{ currentName, quantityName }}</p>
-      <p class="grid-item">{{quantityName }}</p>
+      <p class="grid-item">{{ quantityName }}</p>
     </h3>
   </div>
 </template>

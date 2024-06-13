@@ -7,16 +7,19 @@ import Footer from './components/Footer.vue'
 <template>
   <div>
     <header>
-      <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="50" height="50" />
-
-      <div class="wrapper">
-        <Title app_title="EatSafe" restaurant="Pizza Squizz" />
-
-        <nav>
+      <nav>
+        <div class="logo-contain">
+          <img alt="Vue logo" class="logo" src="@/assets/logo.svg" />
+          <h1>EatSafe</h1>
+        </div>
+        <div>
           <RouterLink to="/">Home</RouterLink>
           <RouterLink to="/about">About</RouterLink>
           <RouterLink to="/display-menu">Menu</RouterLink>
-        </nav>
+        </div>
+      </nav>
+      <div class="wrapper">
+        <Title restaurant="Restaurant Léman" />
       </div>
     </header>
     <RouterView />
@@ -26,21 +29,41 @@ import Footer from './components/Footer.vue'
 
 <style scoped>
 header {
-  line-height: 1.6;
-  max-height: 100vh;
-  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.wrapper {
+  width: 90%;
+  padding: 0 5%;
 }
 
 .logo {
   display: block;
-  margin: 0 auto 2rem;
+  width: 3em;
+}
+
+.logo-contain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 nav {
   width: 100%;
-  font-size: 22px;
-  text-align: center;
-  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  padding: 7% 0;
+  background-color: rgba(194, 194, 194, 0.368);
+  box-shadow:
+    rgba(0, 0, 0, 0.19) 0px 10px 20px,
+    rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  margin-bottom: 10%;
 }
 nav a.router-link-exact-active {
   color: var(--color-text);
@@ -54,8 +77,9 @@ nav a {
   display: inline-block;
   padding: 0 1rem;
   border-left: 1px solid var(--color-border);
+  color: #53c6b9;
+  text-decoration: none;
 }
-
 nav a:first-of-type {
   border: 0;
 }

@@ -22,15 +22,13 @@ defineProps({
 h1 {
   font-weight: 500;
   font-size: 2.6rem;
-  position: relative;
-  top: -10px;
 }
 h2 {
   text-align: center;
 }
 
 h2 {
-  font-size: 1.8rem;
+  font-size: 1.3rem;
 }
 
 .greetings h1,
