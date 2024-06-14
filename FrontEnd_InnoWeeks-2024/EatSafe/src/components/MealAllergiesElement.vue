@@ -49,6 +49,7 @@ onMounted(() => {
       <p id="quantity" v-if="quantityText">{{ quantityText }}</p>
       <p class="necessarity" v-if="props.ingredient.necessary">INDISPENSABLE</p>
       <p class="necessarity" v-else>pas necessaire</p>
+
     </h3>
   </div>
 </template>
