@@ -2,17 +2,16 @@
 import { RouterLink, RouterView } from 'vue-router'
 import Title from './components/Title.vue'
 import Footer from './components/Footer.vue'
+
 </script>
 
 <template>
   <div>
     <header>
-      <nav>
-        <div class="logo-contain">
-          <img alt="Vue logo" class="logo" src="@/assets/logo.svg" />
-          <h1>EatSafe</h1>
-        </div>
-        <div>
+      <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="40" height="40" />
+      <h1 class="green">EatSafe</h1>
+      <div class="wrapper">
+        <nav>
           <RouterLink to="/">Home</RouterLink>
           <RouterLink to="/about">About</RouterLink>
           <RouterLink to="/display-menu">Menu</RouterLink>
@@ -40,6 +39,14 @@ header {
   padding: 0 5%;
 }
 
+h1 {
+  font-weight: 500;
+  font-size: 1.8rem;
+  color: rgb(31, 117, 31); /*  CHANGER COULEURS POUR COULEUR PALLETTE*/
+  position: relative;
+  text-align: center;
+  top: -25px;
+}
 .logo {
   display: block;
   width: 3em;
@@ -64,6 +71,7 @@ nav {
     rgba(0, 0, 0, 0.19) 0px 10px 20px,
     rgba(0, 0, 0, 0.23) 0px 6px 6px;
   margin-bottom: 10%;
+
 }
 nav a.router-link-exact-active {
   color: var(--color-text);

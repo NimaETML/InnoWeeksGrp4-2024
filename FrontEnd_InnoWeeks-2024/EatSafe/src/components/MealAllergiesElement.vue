@@ -9,46 +9,69 @@ import { onMounted, ref } from 'vue'
 import { allergies } from '@/data/allergy_data'
 import { quantities } from '@/data/quanity_data'
 
-let currentName = ref(null)
+let nameText = ref(null)
+let quantityText = ref(null)
+let allergyImg = ref(null)
 
-let quantityName = ref(null)
-
+// Recupère le text pour la quatité stocké en int
 function getQuantityTextFromQuantityNum(QuantityNameId) {
-  console.log(QuantityNameId)
   quantities.forEach((currentQuantity) => {
     if (QuantityNameId == currentQuantity.id) {
-      console.log(currentQuantity.text)
-      quantityName = currentQuantity.text
+      quantityText.value = currentQuantity.text
     }
   })
 }
 
+// Recupère le text pour le nom de l'allergie stocké en int
 function getIngredientNameFromId(IngredientNameId) {
   allergies.forEach((currentAllergy) => {
     if (IngredientNameId == currentAllergy.id) {
-      currentName = currentAllergy.name
+      nameText.value = currentAllergy.name
+      allergyImg.value = currentAllergy.url
     }
   })
 }
+
 onMounted(() => {
   getIngredientNameFromId(props.ingredient.numname)
   getQuantityTextFromQuantityNum(props.ingredient.quantity)
+  console.log(props.ingredient.necessary)
 })
 </script>
 
 <template>
-  <div class="ingredients">
-    <h3>
+  <div>
+    <h3 class="ingredients">
       <!-- prettier-ignore -->
-      <!--<img class="chkbox-img" :src="meal.img_url" width="140" height="140"/>-->
+      <img id="img" v-if="allergyImg" :src="allergyImg" width="46" height="46"/>
       <!-- prettier-ignore -->
-      <p class="grid-item">{{ currentName, quantityName }}</p>
-      <p class="grid-item">{{ quantityName }}</p>
+      <p id="name" v-if="nameText" >{{ nameText }}</p>
+      <p id="quantity" v-if="quantityText">{{ quantityText }}</p>
+      <p class="necessarity" v-if="props.ingredient.necessary">INDISPENSABLE</p>
+      <p class="necessarity" v-else>pas necessaire</p>
+
     </h3>
   </div>
 </template>
 
 <style scoped>
+#img {
+  margin-right: 5px;
+  margin-left: auto;
+}
+#name {
+  margin-right: auto;
+  margin-left: 5px;
+}
+#quantity {
+  margin-right: auto;
+  margin-left: auto;
+}
+.necessarity {
+  margin-right: auto;
+  margin-left: auto;
+}
+
 h3 {
   font-weight: 500;
   margin-bottom: 1.8rem;
@@ -59,6 +82,10 @@ h3 {
   padding: 20px;
 }
 
+.ingredients {
+  display: flex;
+  justify-content: center;
+}
 .name {
   padding-left: 10px;
   padding-right: 10px;

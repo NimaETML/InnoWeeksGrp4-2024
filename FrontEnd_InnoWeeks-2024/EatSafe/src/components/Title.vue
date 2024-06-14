@@ -1,6 +1,6 @@
 <script setup>
 defineProps({
-  app_title: {
+  title_text: {
     type: String,
     required: true
   },
@@ -12,27 +12,30 @@ defineProps({
 </script>
 
 <template>
-  <div class="greetings">
-    <h1 class="green">{{ app_title }}</h1>
-    <h2>vous accèdez au menu du restaurant {{ restaurant }}</h2>
+  <div class="top_text">
+    <h1 id="title_text">{{ title_text }}</h1>
+    <h1 id="rest_title">{{ restaurant }}</h1>
   </div>
 </template>
 
 <style scoped>
 h1 {
   font-weight: 500;
-  font-size: 2.6rem;
-}
-h2 {
-  text-align: center;
+  font-size: 1rem;
+  top: -10px;
 }
 
-h2 {
+#rest_title {
+  font-weight: 700;
   font-size: 1.3rem;
+  top: -10px;
+  color: rgb(47, 153, 47); /*  CHANGER COULEURS POUR COULEUR PALLETTE*/
 }
 
-.greetings h1,
-.greetings h3 {
+.top_text {
   text-align: center;
+  /*
+  display: flex;
+  text-align: right;*/
 }
 </style>
