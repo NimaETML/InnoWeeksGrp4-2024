@@ -100,12 +100,4 @@ h3 {
   font-size: 1.1rem;
   border: 1px solid transparent;
 }
-
-input[type='checkbox'] {
-  float: right;
-  padding-left: 10px;
-  text-align: center;
-  /* center checkbox horizontally */
-  vertical-align: middle;
-}
 </style>

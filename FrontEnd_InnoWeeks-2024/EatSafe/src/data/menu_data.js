@@ -50,6 +50,16 @@ const menus = [
           { id: 129, numname: 9, quantity: 2, necessary: false },
           { id: 734, numname: 3, quantity: 1, necessary: false }
         ]
+      },
+      {
+        id: '4',
+        meal_name: 'taco',
+        meal_description: 'yum yum alot',
+        img_url: '/src/assets/icons/Arachide.png',
+        allergicIngredients: [
+          { id: 635, numname: 7, quantity: 2, needDrop: 'true' },
+          { id: 129, numname: 9, quantity: 2, needDrop: 'false' }
+        ]
       }
     ]
   },
