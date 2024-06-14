@@ -11,9 +11,22 @@ import MealElement from '@/components/MealElement.vue'
 <template>
   <div class="menu-box">
     <h3>
+      <!-- prettier-ignore 
+      <img class="chkbox-img" :src="menu.img_url" width="280" height="280"/>-->
       <!-- prettier-ignore -->
-      <img class="chkbox-img" :src="menu.img_url" width="280" height="280"/>
-      <h2 class="name">{{ menu.menu_name }}</h2>
+      <div
+        class="title-box"
+        
+        v-bind:style="{
+          'background-image': 'url(' + menu.img_url + ')',
+          'background-size': '120%',   'opacity': '.5'
+        }"
+      > 
+        <h2 class="name">
+          {{ menu.menu_name }}
+        </h2>
+      </div>
+
       <h4 class="description">{{ menu.menu_description }}</h4>
       <p>
         <MealElement v-for="meal in menu.meals" :key="meal.id" :meal="meal" />
@@ -23,6 +36,15 @@ import MealElement from '@/components/MealElement.vue'
 </template>
 
 <style scoped>
+/* ccs fait.... */ /* SAUF TITRE TTRANSPARENT*/
+.title-box {
+  width: 70vw;
+  height: 40vw;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+}
+
 h3 {
   font-size: 1.3rem;
   font-weight: 500;
@@ -36,6 +58,8 @@ h3 {
 }
 
 .name {
+  margin-top: auto;
+  margin-bottom: auto;
   padding-left: 10px;
   padding-right: 10px;
   font-size: 2.2rem;
