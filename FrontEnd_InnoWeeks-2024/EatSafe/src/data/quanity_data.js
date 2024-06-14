@@ -1,15 +1,15 @@
 const quantities = [
   {
     id: 0,
-    text: 'pas beacoup'
+    text: 'En dessous de 30g'
   },
   {
     id: 1,
-    text: 'ça va'
+    text: 'Entre 30g et 70g'
   },
   {
     id: 2,
-    text: 'beaucoup'
+    text: 'En dessus de 70g'
   }
 ]
 export { quantities }

@@ -3,7 +3,7 @@ const menus = [
     id: '1',
     menu_name: 'Menu principal',
     menu_description: 'que des bonnes choses',
-    img_url: '/src/assets/icons/no-picture.png',
+    img_url: '/src/assets/meals/pizza.jpg',
     meals: [
       {
         id: '1',

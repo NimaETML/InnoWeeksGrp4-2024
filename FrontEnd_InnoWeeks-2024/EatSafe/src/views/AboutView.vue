@@ -9,4 +9,8 @@
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.about {
+  padding-bottom: auto;
+}
+</style>

@@ -51,8 +51,8 @@ document.querySelectorAll('.option').forEach((option) => {
         <h2>{{ allergy.name }}</h2>
       </div>
       <div class="options">
-        <div id="1" class="option" @click="toggleClass">Intolérant</div>
-        <div id="2" class="option" @click="toggleClass">Allergique</div>
+        <div class="option" @click="toggleClass">Intolérant</div>
+        <div class="option" @click="toggleClass">Allergique</div>
       </div>
     </div>
   </main>
@@ -78,7 +78,7 @@ h3 {
   font-size: 0.7rem;
   font-weight: 500;
   margin-bottom: 1.8rem;
-
+}
 
 main h1 {
   font-size: 28px;

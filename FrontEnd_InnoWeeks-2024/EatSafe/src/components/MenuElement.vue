@@ -14,12 +14,13 @@ import MealElement from '@/components/MealElement.vue'
       <!-- prettier-ignore 
       <img class="chkbox-img" :src="menu.img_url" width="280" height="280"/>-->
       <!-- prettier-ignore -->
+
       <div
         class="title-box"
         
         v-bind:style="{
           'background-image': 'url(' + menu.img_url + ')',
-          'background-size': '120%',   'opacity': '.5'
+          'background-size': '120%',   'opacity': '1'
         }"
       > 
         <h2 class="name">
@@ -46,15 +47,15 @@ import MealElement from '@/components/MealElement.vue'
 }
 
 h3 {
-  font-size: 1.3rem;
+  font-size: 0.8rem;
   font-weight: 500;
-  margin-bottom: 1.8rem;
   text-align: center;
   border: 8px solid green;
   border-radius: 8px;
   padding-top: 30px;
   padding-left: 30px;
   padding-right: 30px;
+  margin: 1rem;
 }
 
 .name {

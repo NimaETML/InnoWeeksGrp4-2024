@@ -44,6 +44,9 @@ h3 {
   grid-template-columns: auto;
   gap: 30px 30px;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 .grid-item {
   background-color: rgba(255, 255, 255, 0.8);
