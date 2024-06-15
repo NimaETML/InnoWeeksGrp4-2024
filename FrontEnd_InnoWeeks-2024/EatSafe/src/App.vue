@@ -2,7 +2,6 @@
 import { RouterLink, RouterView } from 'vue-router'
 import Title from './components/Title.vue'
 import Footer from './components/Footer.vue'
-
 </script>
 
 <template>
@@ -14,9 +13,9 @@ import Footer from './components/Footer.vue'
         <nav>
           <RouterLink to="/">Home</RouterLink>
           <RouterLink to="/about">About</RouterLink>
-          <RouterLink to="/display-menu">Menu</RouterLink>
-        </div>
-      </nav>
+          <RouterLink :to="{ name: '/display-menu', params: { id: 1 } }">Menu</RouterLink>
+        </nav>
+      </div>
       <div class="wrapper">
         <Title restaurant="Restaurant Léman" />
       </div>
@@ -59,9 +58,8 @@ h1 {
 }
 
 nav {
-  width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 2em;
@@ -71,7 +69,6 @@ nav {
     rgba(0, 0, 0, 0.19) 0px 10px 20px,
     rgba(0, 0, 0, 0.23) 0px 6px 6px;
   margin-bottom: 10%;
-
 }
 nav a.router-link-exact-active {
   color: var(--color-text);
@@ -84,7 +81,7 @@ nav a.router-link-exact-active:hover {
 nav a {
   display: inline-block;
   padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+  /*border-left: 1px solid var(--color-border);*/
   color: #53c6b9;
   text-decoration: none;
 }

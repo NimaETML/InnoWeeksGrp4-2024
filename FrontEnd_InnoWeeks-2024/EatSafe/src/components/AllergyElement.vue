@@ -74,11 +74,12 @@ main {
   width: 100%;
   text-align: center;
 }
+
 h3 {
   font-size: 0.7rem;
   font-weight: 500;
   margin-bottom: 1.8rem;
-
+}
 
 main h1 {
   font-size: 28px;

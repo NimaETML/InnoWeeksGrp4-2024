@@ -33,7 +33,6 @@ h1 {
 }
 
 .top_text {
-  text-align: center;
   /*
   display: flex;
   text-align: right;*/
